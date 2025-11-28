@@ -1,0 +1,110 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name ="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tyler Hancock About</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!--   NAVIGATION BAR   -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">About Tyler Hancock</a>
+            <ul class="nav-menu">
+
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active" >About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+            
+                <li><a href="#contact">Contact</a></li>
+            
+            </ul>      
+        </div>
+    </nav>
+
+    <!--   HERO SECTION   -->
+    <section class="hero">
+
+        <div class="hero-content">
+            <h1>About Me</span></h1>
+
+        
+            <div class="cta-buttons">
+                <a class="btn btn-secondary" onclick="showSection('personal')">Personal</a>
+                <a class="btn btn-secondary" onclick="showSection('education')">Education</a>
+                <a class="btn btn-secondary" onclick="showSection('experience')">Experience</a>
+                <a class="btn btn-secondary" onclick="showSection('skills')">Skills</a>
+                
+            </div>
+        </div>       
+    </section>
+
+    <div class ="about-container">
+        <section id="personal" class="about-section active">
+            <h2>💡 Personal 💡</h2>
+            <p>
+                My name is Tyler Hancock, and I was born and raised in Littleton, Colorado. In my free time, 
+                I enjoy nature, gaming, and exploring new technologies. My passion for software began with 
+                video games at a young age, which grew into a fascination with how systems work and how they 
+                can be built. I am particularly interested in backend development and have designed several 
+                small-scale applications and systems as personal projects to further my learning. I aspire 
+                to work on larger-scale projects with a professional, innovation-driven team where I can 
+                continue to grow my skills.
+
+            </p>
+        </section>
+
+        <section id="education" class="about-section hidden">
+            <h2>🎓 Education 🎓</h2>
+            <p>
+                I attended Arapahoe Community College beginning in August 2019, where I earned Associate degrees 
+                in Mathematics and Computer Science with a GPA of 3.75/4.0. In January 2023, I transferred to 
+                Metropolitan State University of Denver and graduated in May 2025 with a Bachelor's degree in 
+                Computer Science (3.88/4.0 GPA). I have also studied a variety of programming languages and 
+                technologies outside of formal coursework through online learning and personal projects.
+
+            </p>
+        </section>
+
+        <section id="experience" class="about-section hidden">
+            <h2>💼 Experience 💼</h2>
+            <p>
+                Throughout my academic and personal work, I have completed a variety of solo and team-based 
+                software development projects which can be found under 
+                <a href="projects.html" class="in-text-link">My Projects</a> using Python, Java, C++, and TypeScript. These projects involved
+                applying object-oriented programming, algorithms, data structures, databases, and software 
+                engineering principles to build functional applications. In team environments, I collaborated 
+                through Git, participated in planning and task splitting, and contributed to documentation, 
+                debugging, and testing. My personal projects have also provided hands-on experience designing 
+                and implementing small-scale applications from the ground up.
+            </p>
+        </section>
+
+        <section id="skills" class="about-section hidden">
+            <h2>💼 Skills 💼</h2>
+            <p>
+                TODO: Skill cards
+            </p>
+        </section>
+    </div>
+            
+   
+    <script>
+        function showSection(sectionId) {
+            console.log("Trying to show section:", sectionId);
+            const sections = document.querySelectorAll('.about-section');
+            sections.forEach(section => {
+                if (section.id === sectionId) {
+                    section.classList.add('active');
+                } else {
+                    section.classList.remove('active');
+                }
+            });
+        }
+
+    </script>
+        
+
+
+</body>
+</html>
