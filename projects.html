@@ -33,7 +33,10 @@
                 <a class="btn btn-secondary" onclick="showSection('Leafy Friends')">Leafy Friends</a>
                 <a class="btn btn-secondary" onclick="showSection('Harsh Sound Detection')">Harsh Sound Detection</a>
                 <a class="btn btn-secondary" onclick="showSection('Duelite')">Duelite</a>
-                
+            </div>
+            <div>
+                <a id="Task Management System" href="https://github.com/Tyguy818/Task-Management-System" target="_blank" class="btn btn-project active">GitHub repository for Task Management System</a>
+                <a id="Leafy Friends" href="https://github.com/Tyguy818/Task-Management-System" target="_blank" class="btn btn-project hidden">GitHub repository for Leafy Friends</a>
             </div>
         </div>       
     </section>
@@ -54,6 +57,7 @@
                 while the second image shows an attempt to register with an ID and email that are already in use. These apply to sub user creation
                 as well.
             </p>
+            <hr>
             <p>
                 <br>
                 <img src="images/Error1.PNG" alt="Invalid email">
@@ -61,22 +65,26 @@
                 <img src="images/Error2.PNG" alt="ID & email already registered">
                 <br>
             </p>
+            <hr>
             <p>
                 Here you can see a main users page layout with options to create a new sub user, manage existing sub users, 
                 create, edit and delete tasks, and log out of the system. When a sub user is created, their password is automatically
                 generated as the primary users id concatenated with the first 3 letters of the sub users name. 
             </p>
+            <hr>
             <p>
                 <br>
                 <img src="images/MainUser.PNG" alt="Main User">
                 <br><br><br>
             </p>
+            <hr>
             <p>
                 Sub users have a simple layout only being able to view tasks created by their primary user, logout, and 
                 mark tasks as complete. They do not have the ability to create, edit, or delete tasks. If a sub user is 
                 deactivated by the main user, they are shown a message indicating such and are unable to log in again until
                 reactivated by the main user.
             </p>
+            <hr>
             <p>
                 <br>
                 <img src="images/SubUser1Tasks.PNG" alt="Main User">
@@ -84,18 +92,21 @@
                 <img src="images/SubUser2Tasks.PNG" alt="Sub User Management">
                 <br><br>
                 <img src="images/SubUser3Deactivated.PNG" alt="Sub User Management">
-                <br>
+
             </p>
+            <hr>
             <p>
                 When a main user goes to manage their sub users, they are presented with a list of their created sub users,
                 the sub user's active status, options to activate, deactivate, or delete accounts, and see each sub user's
                 completed tasks.
             </p>
+            <hr>
             <p>
                 <br>
                 <img src="images/MainUserTasksCompleted.PNG" alt="Main User">
                 <br>
             </p>
+            <hr>
         </section>
 
         <section id="Leafy Friends" class="about-section hidden">
@@ -125,12 +136,25 @@
     <script>
         function showSection(sectionId) {
             console.log("Trying to show section:", sectionId);
+
             const sections = document.querySelectorAll('.about-section');
+            const projectButtons = document.querySelectorAll('.btn-project');
             sections.forEach(section => {
                 if (section.id === sectionId) {
                     section.classList.add('active');
+                    section.classList.remove('hidden');
                 } else {
                     section.classList.remove('active');
+                    section.classList.add('hidden');
+                }
+            });
+            projectButtons.forEach(button => {
+                if (button.id === sectionId) {
+                    button.classList.add('active');
+                    button.classList.remove('hidden');
+                } else {
+                    button.classList.remove('active');
+                    button.classList.add('hidden');
                 }
             });
         }

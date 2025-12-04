@@ -158,6 +158,25 @@ body {
     border: 2px solid white;
 }
 
+.btn-project {
+  background-color: #fff000;
+  border-radius: 25px;
+  color: #000;
+  font-weight: bold;
+  padding: 10px 10px;
+  width: 43%;
+  border: 2px solid;
+  margin-top: 3rem;
+  display: inline-block;
+}
+
+.btn-project.hidden {
+    display: none;
+}
+
+.btn-project.active {
+    display: inline-block;
+}
 .btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.3);
@@ -209,7 +228,7 @@ body {
     color: #2c3e50;
 }
 
-/* ====== ABOUT PAGE TABS — FIXED & WORKING ====== */
+/* ====== ABOUT PAGE TABS ====== */
 .about-container {
     max-width: 1000px;
     margin: 0 auto;
@@ -233,6 +252,13 @@ body {
     font-size: 2.4rem;
     margin-bottom: 2rem;
     color: #2c3e50;
+}
+
+.about-section hr {
+    border: none;
+    border-top: 2px solid #000000;
+    margin: 40px 0;
+    width: 100%;
 }
 
 @keyframes fadeIn {
